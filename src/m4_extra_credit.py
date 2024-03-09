@@ -61,3 +61,32 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def top_half(height, width):
+    if height < 2 or width < 3:
+        print("Invalid Box Size")
+    
+    else:
+        for x in range(height):
+            if x == height - 1:
+                print("*" * width)
+            else:
+                print(" " + ("*" * (width - 2)) + " ")
+        
+def bottem_half(height, width):
+    if height < 2 or width < 3:
+        print("Invalid Box Size")
+    
+    else:
+        for x in range(height):
+            if x == height - 1:
+                print("*" * width)
+            else:
+                print("*" + " " * (width - 2) + "*")
+                
+
+def main(height, width):
+    top_half(height, width)
+    bottem_half(height, width)
+main(5, 6)
+
+#I tried, but somehow made a top hat instead of a house
